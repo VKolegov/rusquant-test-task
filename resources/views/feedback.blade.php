@@ -1,6 +1,6 @@
 @extends('index')
 
-@section('title', 'TEST | Обратная связь')
+@section('title', 'Рус Квант Тестовое | Обратная связь')
 
 @section('content')
     <section
