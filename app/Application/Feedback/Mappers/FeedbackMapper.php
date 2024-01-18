@@ -13,9 +13,10 @@ class FeedbackMapper
     public static function fromRequest(Request $request): Feedback
     {
         return new Feedback(
-            new AuthorName($request->string('name')),
-            new Email($request->string('email')),
-            new FeedbackText($request->string('text')),
+            authorName: new AuthorName($request->string('name')),
+            email: new Email($request->string('email')),
+            text: new FeedbackText($request->string('text')),
         );
     }
+
 }
