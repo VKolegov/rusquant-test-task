@@ -4,6 +4,7 @@ namespace App\Presentation\HTTP;
 
 use App\Application\Feedback\Commands\CreateFeedback;
 use App\Application\Feedback\Mappers\FeedbackMapper;
+use DomainException;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -16,7 +17,7 @@ class FeedbackController
             $feedback = (new CreateFeedback($feedbackData))->execute();
 
             return response()->json($feedback->toArray(), Response::HTTP_CREATED);
-        } catch (\DomainException $domainException) {
+        } catch (DomainException $domainException) {
             return response($domainException->getMessage(), Response::HTTP_UNPROCESSABLE_ENTITY);
         }
     }

@@ -15,7 +15,7 @@ final class AuthorName extends ValueObject
 
     public function __toString(): string
     {
-        return (string) $this->value;
+        return (string)$this->value;
     }
 
     public function jsonSerialize(): ?string

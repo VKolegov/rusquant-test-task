@@ -2,7 +2,9 @@
 
 namespace App\Domain\Shared\Exception;
 
-class RequiredException extends \DomainException
+use DomainException;
+
+class RequiredException extends DomainException
 {
     public function __construct($fieldName)
     {

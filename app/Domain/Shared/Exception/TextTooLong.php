@@ -2,7 +2,9 @@
 
 namespace App\Domain\Shared\Exception;
 
-class TextTooLong extends \DomainException
+use DomainException;
+
+class TextTooLong extends DomainException
 {
     public function __construct(string $fieldName, int $minLength)
     {

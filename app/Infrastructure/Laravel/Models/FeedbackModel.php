@@ -2,8 +2,10 @@
 
 namespace App\Infrastructure\Laravel\Models;
 
+use Eloquent;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
 
 /**
  * App\Infrastructure\Laravel\Models\FeedbackModel
@@ -12,8 +14,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property string|null $author_name
  * @property string $email
  * @property string $text
- * @property \Illuminate\Support\Carbon $created_at
- * @mixin \Eloquent
+ * @property Carbon $created_at
+ * @mixin Eloquent
  */
 class FeedbackModel extends Model
 {
