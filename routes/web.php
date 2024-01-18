@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return 'Yes, it\'s up';
 });
+
+Route::get('/create_feedback', function () {
+   return view('feedback');
+})->name('feedback');
